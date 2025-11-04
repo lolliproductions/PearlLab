@@ -1,0 +1,58 @@
+$sesame: #0A0A0A;
+$taro: #9D4EDD;
+$matcha: #00FFC6;
+$cyan: #00FFFF;
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: $sesame;
+    font-family: "Orbitron", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.container-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar_links {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.navbar_links a {
+  position: relative;
+  text-decoration: none;
+}
+
+.navbar_links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: $cyan;
+  transition: width 0.3s ease;
+}
+
+.navbar_links a:hover::after {
+  width: 100%;
+}
+
+.img_logo {
+    width: 200px;
+    height: auto;
+    margin-left: 50px;
+}
+
+
