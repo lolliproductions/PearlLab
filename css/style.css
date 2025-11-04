@@ -3,8 +3,9 @@
 }
 
 body {
-  background-color: #0A0A0A;
-  font-family: "Orbitron", sans-serif;
+  background: #0A0A0A;
+  font-family: "Space Grotesk";
+  color: white;
 }
 
 a {
@@ -22,6 +23,7 @@ a {
   display: flex;
   flex-direction: row;
   gap: 30px;
+  font-family: "Orbitron", sans-serif;
 }
 
 .navbar_links a {
@@ -35,8 +37,8 @@ a {
   left: 0;
   bottom: 0;
   width: 0;
-  height: 2px;
-  background: #00FFFF;
+  height: 1.5px;
+  background: #00E5FF;
   transition: width 0.3s ease;
 }
 
@@ -48,6 +50,36 @@ a {
   width: 200px;
   height: auto;
   margin-left: 50px;
+}
+
+main {
+  width: 80%;
+  margin: auto;
+}
+
+h1 {
+  font-family: "Rajdhani", sans-serif;
+  margin-bottom: 30px;
+}
+
+.container-main {
+  margin: 80px 20px;
+  padding: 80px;
+  background: linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 255, 198, 0.02));
+  border: 1px solid rgba(0, 255, 198, 0.2);
+  box-shadow: 0 0 25px rgba(0, 255, 198, 0.15), 0 0 50px rgba(157, 78, 221, 0.1);
+}
+
+.introduction {
+  text-align: justify;
+}
+
+.footer-bottom {
+  font-size: 0.8em;
+  color: #0A0A0A;
+  background-color: white;
+  text-align: center;
+  padding: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
