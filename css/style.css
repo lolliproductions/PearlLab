@@ -203,16 +203,6 @@ footer h2 {
     margin: 110px 16px 80px;
     padding: 64px;
   }
-  .images_introduction {
-    top: -70px;
-    left: -20px;
-    width: clamp(180px, 28vw, 300px);
-  }
-  .image_introduction2 {
-    bottom: -70px;
-    right: -20px;
-    width: clamp(170px, 26vw, 240px);
-  }
   .footer-top {
     gap: 28px;
     padding: 32px 16px;
@@ -242,18 +232,6 @@ footer h2 {
   .container-main {
     margin: 140px 14px 100px;
     padding: 44px 22px 88px; /* on laisse de la place pour l’image du bas */
-  }
-  .images_introduction {
-    left: 50%;
-    top: -100px;
-    transform: translateX(-50%) rotate(-2deg);
-    width: clamp(150px, 42vw, 240px);
-  }
-  .image_introduction2 {
-    right: 50%;
-    bottom: -100px;
-    transform: translateX(50%) rotate(2deg);
-    width: clamp(150px, 40vw, 220px);
   }
   main {
     margin-bottom: 120px;
@@ -296,14 +274,6 @@ footer h2 {
     padding: 28px 16px 70px;
     border-radius: 10px;
   }
-  .images_introduction {
-    top: -60px;
-    width: clamp(130px, 46vw, 200px);
-  }
-  .image_introduction2 {
-    bottom: -46px;
-    width: clamp(130px, 44vw, 190px);
-  }
   .sns-icon {
     width: 22px;
   }
@@ -314,6 +284,46 @@ footer h2 {
   }
   .img_footer {
     width: 130px;
+  }
+}
+@media (max-width: 1024px) {
+  .container-main {
+    --img1-left: -4%;
+    --img1-top: -10%;
+    --img2-right: -20%;
+    --img2-bottom: -10%;
+    /* images un peu plus petites, padding auto suit */
+    --img1-w: clamp(150px, 28vw, 300px);
+    --img2-w: clamp(140px, 26vw, 240px);
+  }
+}
+@media (max-width: 700px) {
+  .container-main {
+    /* recentrer visuellement */
+    --img1-left: 50%;
+    --img1-top: 10%;
+    --img2-right: 50%;
+    --img2-bottom: -10%;
+    /* tailles adaptées mobile */
+    --img1-w: clamp(140px, 42vw, 240px);
+    --img2-w: clamp(140px, 40vw, 220px);
+  }
+  .images_introduction {
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+  }
+  .image_introduction2 {
+    right: 50%;
+    transform: translateX(50%) rotate(2deg);
+  }
+}
+@media (max-width: 420px) {
+  .container-main {
+    --img1-w: clamp(120px, 46vw, 200px);
+    --img2-w: clamp(120px, 44vw, 190px);
+    --img1-top: -4%;
+    --img2-bottom: -8%;
+    /* padding recalculé automatiquement, pas besoin de toucher */
   }
 }
 
