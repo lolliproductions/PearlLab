@@ -219,7 +219,7 @@ footer h2 {
     margin-left: 0;
   }
   .navbar_links {
-    gap: 20px;
+    gap: 28px;
     font-size: 0.9rem;
     flex-direction: column;
     text-align: center;
@@ -261,7 +261,6 @@ footer h2 {
 /* Petits mobiles ≤ 420px : compaction finale */
 @media (max-width: 420px) {
   .navbar_links {
-    gap: 10px;
     font-size: 0.85rem;
   }
   h1 {
