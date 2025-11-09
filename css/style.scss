@@ -30,14 +30,10 @@ a {
     gap: 30px;
     font-family: "Orbitron", sans-serif;
     list-style: none;
-}
-
-.navbar_links a {
+   a {
   position: relative;
   text-decoration: none;
-}
-
-.navbar_links a::after {
+     &::after {
   content: "";
   position: absolute;
   left: 0;
@@ -47,9 +43,10 @@ a {
   background: $cyan;
   transition: width 0.3s ease;
 }
-
-.navbar_links a:hover::after {
+&:hover::after {
   width: 100%;
+}
+}
 }
 
 .img_logo {
@@ -62,6 +59,7 @@ a {
 main {
     width: 80%;
     margin: auto;
+    margin-bottom: 150px;
 }
 
 .hero {
@@ -115,10 +113,6 @@ h1 {
   pointer-events: none;    /* décoratif, ne capte pas les clics */
   filter: drop-shadow(0 0 18px rgba(0,255,198,.35))
           drop-shadow(0 0 28px rgba(157,78,221,.25));
-}
-
-main {
-  margin-bottom: 150px;
 }
 
 .img_footer {
@@ -186,7 +180,6 @@ footer h2 {
   transform: scale(1.1);
   filter: drop-shadow(0 0 15px rgba(0, 255, 198, 0.7));
 }
-
 
 .footer-bottom {
     font-size: 0.8em;
