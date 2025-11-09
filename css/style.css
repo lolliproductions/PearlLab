@@ -27,12 +27,10 @@ a {
   font-family: "Orbitron", sans-serif;
   list-style: none;
 }
-
 .navbar_links a {
   position: relative;
   text-decoration: none;
 }
-
 .navbar_links a::after {
   content: "";
   position: absolute;
@@ -43,7 +41,6 @@ a {
   background: #00E5FF;
   transition: width 0.3s ease;
 }
-
 .navbar_links a:hover::after {
   width: 100%;
 }
@@ -58,6 +55,7 @@ a {
 main {
   width: 80%;
   margin: auto;
+  margin-bottom: 150px;
 }
 
 .hero {
@@ -105,10 +103,6 @@ h1 {
   z-index: 2; /* au-dessus du cadre */
   pointer-events: none; /* décoratif, ne capte pas les clics */
   filter: drop-shadow(0 0 18px rgba(0, 255, 198, 0.35)) drop-shadow(0 0 28px rgba(157, 78, 221, 0.25));
-}
-
-main {
-  margin-bottom: 150px;
 }
 
 .img_footer {
@@ -223,6 +217,8 @@ footer h2 {
     font-size: 0.9rem;
     flex-direction: column;
     text-align: center;
+    justify-content: center;
+    padding: 0;
   }
   h1 {
     letter-spacing: 0.14em;
