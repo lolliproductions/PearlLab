@@ -258,12 +258,6 @@ footer h2 {
     width: 130px;
   }
 }
-@media (hover: hover) and (pointer: fine) {
-  .menu img:hover {
-    transform: rotate(-4deg) scale(1.08);
-    filter: drop-shadow(0 0 8px rgba(255, 105, 180, 0.6)) drop-shadow(0 0 16px rgba(186, 85, 211, 0.4));
-  }
-}
 /* écrans ≤ 1200px : resserre la mise en page */
 @media (max-width: 1200px) {
   main {
@@ -282,9 +276,6 @@ footer h2 {
   .menu img {
     height: 180px;
   }
-  .menu p {
-    text-align: left;
-  } /* plus lisible sur colonnes étroites */
 }
 /* écrans ≤ 680px : 1 colonne, titres rescalés, glow adouci */
 @media (max-width: 680px) {
@@ -309,6 +300,32 @@ footer h2 {
   }
   .menu p {
     font-size: 0.95rem;
+    text-align: center;
+  }
+}
+/* appareils avec souris : hover avec glow/rotation */
+@media (hover: hover) and (pointer: fine) {
+  .menu img {
+    transition: transform 0.5s ease, filter 0.3s ease;
+    transform-origin: center bottom;
+  }
+  .menu img:hover {
+    transform: rotate(-4deg) scale(1.08);
+    filter: drop-shadow(0 0 8px rgba(255, 105, 180, 0.6)) drop-shadow(0 0 16px rgba(186, 85, 211, 0.4));
+  }
+}
+/* Appareils tactiles : pas de hover, pas de glow/rotation */
+@media (hover: none), (pointer: coarse) {
+  .menu img {
+    transition: none;
+    transform: none !important;
+    filter: none !important; /* retire la lueur de base si tu en as une */
+    -webkit-tap-highlight-color: transparent; /* évite le flash iOS/Android */
+  }
+  .menu img:active,
+  .menu img:focus { /* sécurité supplémentaire */
+    transform: none !important;
+    filter: none !important;
   }
 }
 
