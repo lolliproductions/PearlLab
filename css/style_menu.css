@@ -71,7 +71,7 @@ main {
   text-align: center;
 }
 
-.menu img {
+.img-bubble-tea {
   width: auto;
   height: 200px;
   transition: transform 0.5s ease, filter 0.3s ease;
@@ -79,7 +79,7 @@ main {
   filter: drop-shadow(0 0 4px rgba(255, 105, 180, 0.6)) drop-shadow(0 0 8px rgba(186, 85, 211, 0.4));
 }
 
-.menu img:hover {
+.img-bubble-tea:hover {
   transform: rotate(-4deg) scale(1.08);
   filter: drop-shadow(0 0 8px rgba(255, 105, 180, 0.6)) drop-shadow(0 0 16px rgba(186, 85, 211, 0.4));
 }
@@ -94,7 +94,7 @@ main {
 }
 
 .menu h2 {
-  margin: 80px 0 50px 0;
+  margin: 150px 0 60px 0;
 }
 
 .menu h3 {
@@ -105,6 +105,13 @@ main {
 .menu p {
   text-align: justify;
   margin-top: 20px;
+}
+
+.icone-chaud-froid {
+  margin-top: 20px;
+  width: 25px;
+  height: auto;
+  filter: none;
 }
 
 .container-menu {
@@ -273,7 +280,7 @@ footer h2 {
     grid-template-columns: repeat(2, minmax(220px, 1fr));
     gap: 40px;
   }
-  .menu img {
+  .img-bubble-tea {
     height: 180px;
   }
 }
@@ -286,7 +293,7 @@ footer h2 {
     grid-template-columns: 1fr;
     gap: 32px;
   }
-  .menu img {
+  .img-bubble-tea {
     height: 160px;
     filter: drop-shadow(0 0 4px rgba(255, 105, 180, 0.45)) drop-shadow(0 0 10px rgba(186, 85, 211, 0.3));
   }
@@ -296,7 +303,7 @@ footer h2 {
   }
   .menu h2 {
     font-size: 1.4rem;
-    margin: 50px 0 30px;
+    margin: 100px 0 50px;
   }
   .menu p {
     font-size: 0.95rem;
@@ -305,25 +312,24 @@ footer h2 {
 }
 /* appareils avec souris : hover avec glow/rotation */
 @media (hover: hover) and (pointer: fine) {
-  .menu img {
+  .img-bubble-tea {
     transition: transform 0.5s ease, filter 0.3s ease;
     transform-origin: center bottom;
   }
-  .menu img:hover {
+  .img-bubble-tea:hover {
     transform: rotate(-4deg) scale(1.08);
     filter: drop-shadow(0 0 8px rgba(255, 105, 180, 0.6)) drop-shadow(0 0 16px rgba(186, 85, 211, 0.4));
   }
 }
 /* Appareils tactiles : pas de hover, pas de glow/rotation */
 @media (hover: none), (pointer: coarse) {
-  .menu img {
+  .img-bubble-tea {
     transition: none;
-    transform: none !important;
-    filter: none !important; /* retire la lueur de base si tu en as une */
+    transform: none !important; /* retire la lueur de base si tu en as une */
     -webkit-tap-highlight-color: transparent; /* évite le flash iOS/Android */
   }
-  .menu img:active,
-  .menu img:focus { /* sécurité supplémentaire */
+  .img-bubble-tea:active,
+  .img-bubble-tea:focus { /* sécurité supplémentaire */
     transform: none !important;
     filter: none !important;
   }
