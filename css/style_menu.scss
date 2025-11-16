@@ -89,16 +89,28 @@ main {
 }
 
 .menu h1, h2 {
-    font-family: "Orbitron";
     font-weight: lighter;
+}
+
+.menu-text {
+text-align: center;
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 80px;
 }
 
 .menu h1 {
     margin: 50px 0px 0px 0;
+    font-family: "Rajdhani";
 }
 
-.menu h2 {
+.menu-subtitle {
     margin: 150px 0 60px 0;
+    font-family: "Orbitron";
+}
+
+.first {
+  margin: 40px 0 60px 0;
 }
 
 .menu h3 {
@@ -296,7 +308,7 @@ footer h2 {
             drop-shadow(0 0 10px rgba(186, 85, 211, 0.3));
   }
   .menu h1 { font-size: 2rem; margin-top: 30px; }
-  .menu h2 { font-size: 1.4rem; margin: 100px 0 50px; }
+  .menu h2 { font-size: 1.4rem; }
   .menu p  { font-size: 0.95rem; text-align: center; } 
 }
 
