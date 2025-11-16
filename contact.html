@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Contact - Pearl Lab</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/style_contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Rajdhani&family=Space+Grotesk&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container-header">
+        <nav class="navbar">
+            <ul class="navbar_links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="a_propos.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul></nav>
+            <a href="index.html"><img src="images/logo.png" class="img_logo" alt="logo du site"></a>
+            </div>
+    </header>
+
+    <main>
+<section class="contact-section">
+  <h1 class="contact-title">Contact</h1>
+  <p class="contact-subtitle">
+    Une question, une collaboration ou envie d’imaginer une boisson sur-mesure ?
+    Écrivez-nous, le laboratoire vous répondra au plus vite.
+  </p>
+
+  <div class="contact-grid">
+
+    <!-- Colonne gauche : infos -->
+    <div class="contact-info">
+      <h2>Infos pratiques</h2>
+      <p>
+        Pour toute demande concernant Pearl Lab, les créations, événements privés ou partenariats,
+        vous pouvez nous joindre via le formulaire ou directement avec les coordonnées ci-dessous.
+      </p>
+
+      <div class="info-block">
+        <h3>Coordonnées</h3>
+        <p>Email : <a href="mailto:hello@pearllab.com">hello@pearllab.com</a></p>
+        <p>Téléphone : <a href="tel:+33123456789">+33 1 23 45 67 89</a></p>
+      </div>
+
+      <div class="info-block">
+        <h3>Horaires</h3>
+        <p>Lundi : Fermé</p>
+        <p>Mardi : Fermé</p>
+        <p>Mercredi - Vendredi : 12h - 20h</p>
+        <p>Samedi - Dimanche : 12h – 21h</p>
+      </div>
+
+      <div class="info-block">
+        <h3>Réseaux</h3>
+        <p>
+          Suivez l’expérience Pearl Lab sur :
+          <br>
+          <a href="#" target="_blank">Facebook</a> ·
+          <a href="#" target="_blank">Instagram</a> ·
+          <a href="#" target="_blank">TikTok</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Colonne droite : formulaire -->
+    <div class="contact-form-wrapper">
+      <h2>Écrivez-nous</h2>
+
+      <form class="contact-form" action="#" method="post">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Nom / Prénom</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Adresse email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="subject">Objet de la demande</label>
+          <select id="subject" name="subject" required>
+            <option value="">Sélectionnez une option</option>
+            <option value="info">Demande d'information</option>
+            <option value="event">Événement / privatisation</option>
+            <option value="collab">Collaboration / partenariat</option>
+            <option value="other">Autre</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="neon-btn contact-btn">
+          Envoyer le message
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <p class="contact-footnote">
+    Chaque message est lu avec attention. Merci de faire partie de l’expérience Pearl Lab. ✨
+  </p>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-col">
+            <a href="index.html"><img src="images/logo.png" alt="logo du site" class="img_footer"></a>
+            </div>
+            <div class="footer-col">
+            <h2>Où nous trouver ?</h2>
+            <div class="footer-location">
+            <img src="images/location.png" class="location-icon">
+            <p>42 Avenue des Lumières,<br> 75002 Paris</p>
+            </div>
+    </div>
+     <div class="footer-col">
+            <h2>Nos horaires</h2>
+            <p>Lundi : Fermé<br>
+                Mardi : Fermé<br>
+                Mercredi - Vendredi : 12h - 20h<br>
+                Samedi - Dimanche : 12h - 21h</p>
+                </div>
+                <div class="footer-col">
+            <h2>Nous suivre</h2>
+            <div class="footer-sns">
+           <img src="images/facebook.png" alt="logo facebook" class="sns-icon">
+            <img src="images/instagram.png" alt="logo instagram" class="sns-icon">
+            <img src="images/tiktok.png" alt="logo tiktok" class="sns-icon">
+        </div>
+        </div>
+        </div>
+        <div class="footer-bottom">Site codé par Lauriane Sannier - © 2025</div></footer>
+</body>
+
+</html>

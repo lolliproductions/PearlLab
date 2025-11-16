@@ -51,82 +51,193 @@ a {
 }
 }
 
+.contact-section {
+  width: 85%;
+  max-width: 1100px;
+  margin: 80px auto 60px;
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  font-family: "Rajdhani";
+  font-weight: lighter;
+}
+
+.contact-subtitle {
+  text-align: center;
+  font-size: 1.02rem;
+  opacity: 0.9;
+  margin-bottom: 80px;
+}
+
+/* Grid principale */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1.2fr;
+  gap: 40px;
+}
+
+/* Colonne gauche : infos */
+.contact-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+}
+
+.contact-info > p {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  opacity: 0.9;
+}
+
+.info-block {
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 2px $taro;
+}
+
+.info-block h3 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.info-block p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.info-block a {
+  color: $cyan;
+  text-decoration: none;
+}
+
+.info-block a:hover {
+  text-decoration: underline;
+}
+
+/* Colonne droite : formulaire */
+
+.contact-form-wrapper h2 {
+  font-size: 1.5rem;
+  margin-bottom: 78px;
+}
+
+.contact-form {
+  padding: 25px 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 14px #00eaff33;
+}
+
+/* Ligne double champs */
+.form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.form-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.form-field label {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  opacity: 0.9;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+/* Focus néon */
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: $cyan;
+  box-shadow: 0 0 10px #00eaff66;
+}
+
+/* Bouton contact */
+.contact-btn {
+  margin-top: 8px;
+  font-size: 1rem;
+}
+
+/* Tu peux réutiliser ta classe .neon-btn existante, sinon : */
+.neon-btn {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 999px;
+  background: #000;
+  color: #fff;
+  border: 1px solid $cyan;
+  box-shadow: 0 0 12px $cyan, 0 0 28px $cyan inset;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.neon-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px $cyan, 0 0 36px $cyan inset;
+}
+
+.contact-footnote {
+  text-align: center;
+  font-size: 0.9rem;
+  margin: 40px 0 80px 0;
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-section {
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+}
+
+
+
+
+
 .img_logo {
     width: 200px;
     height: auto;
     margin-left: 50px;
     filter: drop-shadow(0 0 18px rgba(0,255,198,.35));
-}
-
-body { margin: 0; }
-
-/* conteneur principal */
-main {
-  width: 80%;
-  margin: 0 auto 150px;
-}
-
-.menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.img-bubble-tea {
-    width: auto;
-    height: 200px;
-    transition: transform 0.5s ease, filter 0.3s ease;
-  transform-origin: center bottom; /* pivot depuis la base du verre */
-  filter: drop-shadow(0 0 4px rgba(255, 105, 180, 0.6))
-          drop-shadow(0 0 8px rgba(186, 85, 211, 0.4));
-}
-
-.img-bubble-tea:hover {
-  transform: rotate(-4deg) scale(1.08);
-  filter: drop-shadow(0 0 8px rgba(255, 105, 180, 0.6))
-          drop-shadow(0 0 16px rgba(186, 85, 211, 0.4));
-}
-
-.menu h1, h2 {
-    font-family: "Orbitron";
-    font-weight: lighter;
-}
-
-.menu h1 {
-    margin: 50px 0px 0px 0;
-}
-
-.menu h2 {
-    margin: 150px 0 60px 0;
-}
-
-.menu h3 {
-    font-family: "Rajdhani";
-    margin-top: 20px;
-}
-
-.menu p {
-    text-align: justify;
-    margin-top: 20px;
-}
-
-.icone-chaud-froid {
-  margin-top: 20px;
-  width: 25px;
-  height: auto;
-  filter: none;
-}
-
-.container-menu {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 0 auto;
-    max-width: 1200px;
-    justify-items: center;   /* centre les éléments dans chaque colonne */
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
 }
 
 .img_footer {
@@ -216,7 +327,6 @@ footer h2 {
   }
 }
 
-
 @media (max-width: 700px) {
   .container-header {
     flex-direction: column-reverse;
@@ -265,64 +375,4 @@ footer h2 {
   .sns-icon { width: 22px; }
   .location-icon { width: 20px; margin-left: 0; margin-top: 0; }
   .img_footer { width: 130px; }
-}
-
-
-/* écrans ≤ 1200px : resserre la mise en page */
-@media (max-width: 1200px) {
-  main { width: 90%; }
-  .container-menu { gap: 48px; }
-}
-
-/* écrans ≤ 992px : passe à 2 colonnes, images plus petites */
-@media (max-width: 992px) {
-  .container-menu {
-    grid-template-columns: repeat(2, minmax(220px, 1fr));
-    gap: 40px;
-  }
-  .img-bubble-tea { height: 180px; }
-}
-
-/* écrans ≤ 680px : 1 colonne, titres rescalés, glow adouci */
-@media (max-width: 680px) {
-  main { width: 92%; }
-  .container-menu {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-  .img-bubble-tea {
-    height: 160px;
-    filter: drop-shadow(0 0 4px rgba(255, 105, 180, 0.45))
-            drop-shadow(0 0 10px rgba(186, 85, 211, 0.3));
-  }
-  .menu h1 { font-size: 2rem; margin-top: 30px; }
-  .menu h2 { font-size: 1.4rem; margin: 100px 0 50px; }
-  .menu p  { font-size: 0.95rem; text-align: center; } 
-}
-
-/* appareils avec souris : hover avec glow/rotation */
-@media (hover: hover) and (pointer: fine) {
-  .img-bubble-tea {
-    transition: transform .5s ease, filter .3s ease;
-    transform-origin: center bottom;
-  }
-  .img-bubble-tea:hover {
-    transform: rotate(-4deg) scale(1.08);
-    filter: drop-shadow(0 0 8px rgba(255,105,180,.6))
-            drop-shadow(0 0 16px rgba(186,85,211,.4));
-  }
-}
-
-/* Appareils tactiles : pas de hover, pas de glow/rotation */
-@media (hover: none), (pointer: coarse) {
-  .img-bubble-tea {
-    transition: none;
-    transform: none !important;     /* retire la lueur de base si tu en as une */
-    -webkit-tap-highlight-color: transparent; /* évite le flash iOS/Android */
-  }
-  .img-bubble-tea:active,
-  .img-bubble-tea:focus {                    /* sécurité supplémentaire */
-    transform: none !important;
-    filter: none !important;
-  }
 }
